@@ -47,7 +47,7 @@ header h1 span.second {
     padding: 0 0 0 6px;
 }
 nav ul{
-    background:url(../images/banner.png);
+    background:url(../images/banner.png) no-repeat;
     height: 78px;
     padding: 52px 0 0;
 }
