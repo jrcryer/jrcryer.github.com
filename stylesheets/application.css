@@ -165,6 +165,34 @@ footer ul a:active{
         width: 16.75%;
     }
 }
+@media only screen and (max-width:320px) {
+    body {
+        width: 320px;
+    }
+    footer {
+        position: relative;
+    }
+    #github {
+        width: 48.0%;
+        margin-bottom: 60px;
+    }
+    #linkedin {
+        position: absolute;
+        top: 60px;
+        left: 52px;
+        width: 48.0%;
+    }
+    #googleplus {
+        position: absolute;
+        top: 60px;
+        left: 194px;
+        width: 48.0%;
+    }
+    #twitter {
+        width: 48.0%;
+        margin-bottom: 60px;
+    }
+}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     body {
         width: 1024px;
