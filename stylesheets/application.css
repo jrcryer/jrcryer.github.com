@@ -80,6 +80,9 @@ article section {
     margin-bottom: 20px;
 }
 
+footer {
+    padding: 0 0 30px;
+}
 footer .copyright {
     float: right;
     font-size: 0.7em;
