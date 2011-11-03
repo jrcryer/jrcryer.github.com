@@ -1,0 +1,118 @@
+body {
+    font-family: 'Mako', sans-serif;
+    width: 1044px;
+    margin: 0 auto;
+    padding: 30px 0;
+    background:url(../images/background.png);
+}
+h1, h2 {
+    font-family: 'Lobster', cursive;
+}
+
+header {
+    position: relative;
+}
+#page-title {
+    width: 118px;
+    z-index:1000;
+    position: absolute;
+    top: 20px;
+    left: 45%;
+}
+header h1 {
+    font-size: 2.5em;
+    -moz-transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+header h1 a,
+header h1 a:hover,
+header h1 a:visited,
+header h1 a:active {
+    color: #F7F7F7;
+    text-decoration: none;
+    text-shadow: 0.08em 0.1em 0.01em #333;
+}
+header h1 span {
+    display: block;
+}
+header h1 span.second {
+    padding: 0 0 0 6px;
+}
+nav ul{
+    background:url(../images/banner.png);
+    height: 78px;
+    padding: 52px 0 0;
+}
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:active {
+    color: #F7F7F7;
+    text-decoration: none;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px #3F3F3F;
+}
+
+article {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 0 40px;
+    background: url(../images/divider.png) 50% 100% no-repeat;
+}
+article header a {
+    color: #3F3F3F;
+    text-decoration: none;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #3F3F3F;
+}
+article header {
+    margin: 0 0 20px;
+}
+article section {
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    float: right;
+    font-size: 0.7em;
+}
+footer ul a {
+    display: block;
+    text-indent: -9999px;
+    opacity: 0.5;
+    -o-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+footer ul a:hover,
+footer ul a:active{
+    opacity: 1;
+}
+#github a {
+    width: 100px;
+    height: 44px;
+    background:url(../images/github.png) no-repeat;
+}
+#linkedin a {
+    width: 40px;
+    height: 40px;
+    background:url(../images/linkedin.png) no-repeat;
+}
+#googleplus a {
+    width: 40px;
+    height: 40px;
+    background:url(../images/googleplus.png) no-repeat;
+}
+#twitter {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#twitter a {
+    width: 158px;
+    height: 28px;
+    background:url(../images/twitter.png) no-repeat;
+}
