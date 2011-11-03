@@ -5,9 +5,9 @@ body {
     padding: 30px 0;
     background:url(../images/background.png);
 }
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:480px) {
     body {
-          width: 960px;
+        width: 480px;
     }
 }
 h1, h2 {
