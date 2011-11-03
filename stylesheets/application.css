@@ -1,12 +1,12 @@
 body {
-    font-family: 'Mako', sans-serif;
+    font-family: 'Mako', Arial;
     width: 1044px;
     margin: 0 auto;
     padding: 30px 0;
     background:url(../images/background.png);
 }
 h1, h2 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', Arial;
 }
 
 header {
@@ -57,10 +57,14 @@ nav a:active {
 }
 
 article {
+    font-family: 'Mako', Arial;
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 0 0 40px;
     background: url(../images/divider.png) 50% 100% no-repeat;
+}
+article header {
+    margin: 0 0 20px;
 }
 article header a {
     color: #3F3F3F;
@@ -68,11 +72,22 @@ article header a {
     font-size: 1.8em;
     text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #3F3F3F;
 }
-article header {
-    margin: 0 0 20px;
-}
 article section {
     margin-bottom: 20px;
+}
+article section h3 {
+    font-family: 'Comfortaa', Arial;
+    font-size: 1.2em;
+    line-height: 1.325em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 1px #FFF;
+}
+article section div {
+    margin-bottom: 20px;
+}
+article section p {
+    margin: 10px 0;
 }
 
 footer {
@@ -145,6 +160,9 @@ footer ul a:active{
     #page-title {
         top:20px;
         left: 35%;
+    }
+    article.container_16 .grid_8 {
+        width: 98.0%;
     }
     .container_16 .copyright {
         padding: 10px;
