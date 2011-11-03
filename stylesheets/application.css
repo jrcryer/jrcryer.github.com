@@ -175,6 +175,9 @@ footer ul a:active{
     #title {
         background-position: 51% 100%;
     }
+    #page-title {
+        left: 34.5%;
+    }
     footer {
         position: relative;
     }
