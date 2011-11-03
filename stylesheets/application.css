@@ -5,16 +5,6 @@ body {
     padding: 30px 0;
     background:url(../images/background.png);
 }
-@media only screen and (max-width:480px) {
-    body {
-        width: 480px;
-    }
-}
-@media only screen and (max-width:320px) {
-    body {
-        width: 320px;
-    }
-}
 h1, h2 {
     font-family: 'Lobster', cursive;
 }
@@ -128,4 +118,55 @@ footer ul a:active{
     width: 158px;
     height: 28px;
     background:url(../images/twitter.png) no-repeat;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width:480px) {
+    body {
+        width: 480px;
+    }
+    .container_16 {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    nav {
+        height: 0px;
+        width: 0px;
+        display: none;
+    }
+    #page-title {
+        position: relative;
+        top:0;
+        left: 0;
+        text-align: center;
+    }
+    .container_16 .copyright {
+        padding: 10px;
+        width: 98%;
+        text-align:center;
+    }
+    #github {
+        width: 23.0%;
+        left: 6.25%;
+        padding-left: 0;
+    }
+    #linkedin {
+        width: 10.5%;
+        left: 12.5%;
+    }
+    #googleplus {
+        width: 23.0%;
+        left: 12.5%;
+    }
+    #twitter {
+        width: 16.75%;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body {
+        width: 1024px;
+    }
 }
