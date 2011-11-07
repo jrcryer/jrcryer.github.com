@@ -4,6 +4,7 @@ body {
     margin: 0 auto;
     padding: 30px 0;
     background:url(../images/background.png);
+    color: #3D3D3D;
 }
 h1, h2 {
     font-family: 'Lobster', Arial;
@@ -88,6 +89,12 @@ article section div {
 }
 article section p {
     margin: 10px 0;
+}
+article a,
+article a:hover,
+article a:visited {
+    color: #3D3D3D;
+    text-decoration: none;
 }
 
 footer {
