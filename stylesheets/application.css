@@ -219,7 +219,14 @@ footer ul a:active{
     #twitter {
         width: 16.75%;
     }
-
+}
+@media only screen and (max-width:540px) {
+    #title {
+        background-position: 50% 100%;
+    }
+    #page-title {
+        left: 38%;
+    }
 }
 @media only screen and (max-width:480px) {
     body {
