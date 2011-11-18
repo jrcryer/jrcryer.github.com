@@ -1,6 +1,6 @@
 body {
     font-family: 'Mako', Arial;
-    width: 1044px;
+    max-width: 1044px;
     margin: 0 auto;
     padding: 30px 0;
     background:url(../images/background.png);
@@ -67,6 +67,10 @@ section#strapline h2 {
    font-size: 2.2em;
    text-shadow: 1px 1px 1px white, 2px 2px 1px #3F3F3F;
    line-height: 40px;
+   -o-transition: all linear 0.2s;
+   -moz-transition: all linear 0.2s;
+   -webkit-transition: all linear 0.2s;
+   transition: all linear 0.2s;
 }
 section#strapline span {
     display: block;
@@ -162,7 +166,44 @@ footer ul a:active{
 
 
 /* Media Queries */
+@media only screen and (max-width:960px) {
+    section#strapline h2 {
+        font-size: 1.8em;
+    }
+}
+@media only screen and (max-width:900px) {
+    footer.container_16 .prefix_4 {
+        padding-left: 23%;
+    }
+    footer.container_16 .grid_3 {
+        width: 18.75%;
+    }
+}
+@media only screen and (max-width:780px) {
+    section#strapline h2 {
+        text-align:center
+    }
+    section#strapline h2 .second {
+        padding: 0;
+    }
+    #github {
+        width: 23.0%;
+        left: 6.25%;
+        padding-left: 0;
+    }
+    #linkedin {
+        width: 10.5%;
+        left: 12.5%;
+    }
+    #googleplus {
+        width: 23.0%;
+        left: 12.5%;
+    }
+    #twitter {
+        width: 16.75%;
+    }
 
+}
 @media only screen and (max-width:480px) {
     body {
         width: 480px;
