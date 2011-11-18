@@ -57,6 +57,23 @@ nav a:active {
     text-shadow: 1px 1px 1px #3F3F3F;
 }
 
+section#strapline {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section#strapline h2 {
+   color: #3F3F3F;
+   text-decoration: none;
+   font-size: 2.2em;
+   text-shadow: 1px 1px 1px white, 2px 2px 1px #3F3F3F;
+}
+section#strapline span {
+    display: block;
+}
+section#strapline span.second {
+    padding: 0 0 0 120px;
+}
+
 article {
     font-family: 'Mako', Arial;
     margin-top: 30px;
