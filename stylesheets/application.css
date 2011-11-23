@@ -293,4 +293,19 @@ footer .copyright {
     article section div.mid {
         clear: none;
     }
+    .php {
+        float: left;
+        width: 68.75%;
+    }
+    .php .project {
+        width: 45.4545454545%;
+    }
+    .php .first {
+        padding-right: 4.54545454545%;
+    }
+    .javascript {
+        float: left;
+        clear: none;
+        width: 31.25%;
+    }
 }
