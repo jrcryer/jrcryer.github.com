@@ -1,8 +1,7 @@
 body {
     font-family: 'Mako', Arial;
-    max-width: 1044px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 1.875em 0;
     background:url(../images/background.png);
     color: #3D3D3D;
 }
@@ -10,15 +9,22 @@ h1, h2 {
     font-family: 'Lobster', Arial;
 }
 
-header {
-    position: relative;
+#title {
+    background: #224466;
+    padding: 0.125em 0;
+    margin-bottom: 1em;
+    -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#title hgroup {
+    padding: 0.3125em 0 0.9375em;
+    border-top: 2px solid #F7F7F7;
+    border-bottom: 2px solid #F7F7F7;
 }
 #page-title {
-    width: 118px;
+    text-align:center;
     z-index:1000;
-    position: absolute;
-    top: 20px;
-    left: 45%;
 }
 header h1 {
     font-size: 2.5em;
@@ -36,16 +42,21 @@ header h1 a:active {
     text-decoration: none;
     text-shadow: 0.08em 0.1em 0.01em #333;
 }
-header h1 span {
-    display: block;
+
+nav {
+    background: rgba(34, 68, 102, 0.95);
+    padding: 0.625em 0;
+    margin-bottom: 2em;
+    -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
-header h1 span.second {
-    padding: 0 0 0 6px;
+nav ul {
+    text-align: center;
 }
-nav ul{
-    background:url(../images/banner.png) no-repeat 48% 0%;
-    height: 78px;
-    padding: 52px 0 0;
+nav ul li {
+    display: inline;
+    padding: 0 8%;
 }
 nav a,
 nav a:hover,
@@ -58,10 +69,10 @@ nav a:active {
 }
 
 section#strapline {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
 }
 section#strapline h2 {
+   text-align: center;
    color: #3F3F3F;
    text-decoration: none;
    font-size: 2.2em;
@@ -75,19 +86,15 @@ section#strapline h2 {
 section#strapline span {
     display: block;
 }
-section#strapline span.second {
-    padding: 0 0 0 10%;
-}
 
 article {
     font-family: 'Mako', Arial;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 0 0 40px;
     background: url(../images/divider.png) 50% 100% no-repeat;
+    padding-bottom: 2em;
+    margin: 0 0.9375em 2em;
 }
 article header {
-    margin: 0 0 20px;
+    margin-bottom: 2em;
 }
 article header a {
     color: #3F3F3F;
@@ -96,21 +103,20 @@ article header a {
     text-shadow: 1px 1px 1px #FFF, 2px 2px 1px #3F3F3F;
 }
 article section {
-    margin-bottom: 20px;
 }
 article section h3 {
     font-family: 'Comfortaa', Arial;
     font-size: 1.2em;
     line-height: 1.325em;
     letter-spacing: 2px;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 1px #FFF;
+    margin-bottom: 1em;
 }
 article section div {
-    margin-bottom: 20px;
+    margin-bottom: 2em;
 }
 article section p {
-    margin: 10px 0;
+    margin-bottom: 0.8em;
 }
 article a,
 article a:hover,
@@ -119,183 +125,14 @@ article a:visited {
     text-decoration: none;
 }
 
-footer {
-    padding: 0 0 30px;
+footer ul li {
+    display:inline;
+    padding: 0 8%;
 }
 footer .copyright {
-    float: right;
-    font-size: 0.7em;
-}
-footer ul a {
     display: block;
-    text-indent: -9999px;
-    opacity: 0.5;
-    -o-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    margin: 1em 0;
+    text-align: center;
+    font-size: 0.75em;
 }
-footer ul a:hover,
-footer ul a:active{
-    opacity: 1;
-}
-#github a {
-    width: 100px;
-    height: 44px;
-    background:url(../images/github.png) no-repeat;
-}
-#linkedin a {
-    width: 40px;
-    height: 40px;
-    background:url(../images/linkedin.png) no-repeat;
-}
-#googleplus a {
-    width: 40px;
-    height: 40px;
-    background:url(../images/googleplus.png) no-repeat;
-}
-#twitter {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-#twitter a {
-    width: 158px;
-    height: 28px;
-    background:url(../images/twitter.png) no-repeat;
-}
-
-
 /* Media Queries */
-@media only screen and (max-width:960px) {
-    section#strapline h2 {
-        font-size: 1.8em;
-    }
-}
-@media only screen and (max-width:900px) {
-    nav ul {
-        background-position: 44% 0%;
-    }
-    footer.container_16 .prefix_4 {
-        padding-left: 23%;
-    }
-    footer.container_16 .grid_3 {
-        width: 18.75%;
-    }
-}
-@media only screen and (max-width:780px) {
-    nav {
-        height: 0px;
-        width: 0px;
-        display: none;
-    }
-    #title {
-        position: relative;
-        background:url(../images/banner.png) 43% 100% no-repeat;
-        height: 130px;
-        text-align:center;
-    }
-    #page-title {
-        top:20px;
-    } 
-    section#strapline h2 {
-        text-align:center
-    }
-    section#strapline h2 .second {
-        padding: 0;
-    }
-    #github {
-        width: 23.0%;
-        left: 6.25%;
-        padding-left: 0;
-    }
-    #linkedin {
-        width: 10.5%;
-        left: 12.5%;
-    }
-    #googleplus {
-        width: 23.0%;
-        left: 12.5%;
-    }
-    #twitter {
-        width: 16.75%;
-    }
-}
-@media only screen and (max-width:540px) {
-    #title {
-        background-position: 50% 100%;
-    }
-    #page-title {
-        left: 38%;
-    }
-}
-@media only screen and (max-width:480px) {
-    body {
-        width: 480px;
-    }
-    .container_16 {
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    #title {
-        background-position: 50% 100%;
-    }
-    #page-title {
-        left: 38%;
-    }
-    article.container_16 .grid_8 {
-        width: 98.0%;
-    }
-    article.container_16 .push_2 {
-        left: 0;
-    }
-    .container_16 .copyright {
-        padding: 10px;
-        width: 98%;
-        text-align:center;
-    }
-    section#strapline span {
-       display: inline;
-    }
-    section#strapline span.second {
-        padding: 0;
-    }
-}
-@media only screen and (max-width:320px) {
-    body {
-        width: 320px;
-    }
-    #title {
-        background-position: 51% 100%;
-    }
-    #page-title {
-        left: 30%;
-    }
-    footer {
-        position: relative;
-    }
-    #github {
-        width: 48.0%;
-        margin-bottom: 60px;
-    }
-    #linkedin {
-        position: absolute;
-        top: 60px;
-        left: 52px;
-        width: 48.0%;
-    }
-    #googleplus {
-        position: absolute;
-        top: 60px;
-        left: 194px;
-    }
-    #twitter {
-        width: 48.0%;
-        margin-bottom: 60px;
-    }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    body {
-        width: 1024px;
-    }
-}
