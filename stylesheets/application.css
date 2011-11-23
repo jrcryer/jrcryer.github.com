@@ -120,10 +120,6 @@ article section h3 {
 }
 article section div {
     margin-bottom: 2em;
-    -o-transition: width linear 0.3s;
-   -moz-transition: width linear 0.3s;
-   -webkit-transition: width linear 0.3s;
-   transition: width linear 0.3s;
 }
 article section p {
     margin-bottom: 0.8em;
@@ -273,6 +269,12 @@ footer .copyright {
     }
     article section {
         clear: left;
+    }
+    article section div {
+        -o-transition: width linear 0.2s;
+        -moz-transition: width linear 0.2s;
+        -webkit-transition: width linear 0.2s;
+        transition: width linear 0.2s;
     }
 }
 
