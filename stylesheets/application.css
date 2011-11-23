@@ -139,8 +139,8 @@ footer {
     max-width: 700px;
 }
 footer ul li {
-    display:inline;
-    padding: 0 7%;
+    display: block;
+    float: left;
 }
 footer ul li a {
     opacity: 0.5;
@@ -152,13 +152,116 @@ footer ul li a {
 footer ul li a:hover {
     opacity: 1;
 }
+footer img {
+    max-width: 100%;
+}
+#github {
+    padding-left: 27.1428571429%;
+    width: 14.2857142857%;
+    padding-right: 1.42857142857%;
+}
+#linkedin {
+    width: 5.71428571429%;
+    padding-right: 2.85714285714%;
+}
+#googleplus {
+    width: 5.71428571429%;
+}
+#twitter {
+    padding-left: 1.42857142857%;
+    width: 21.4285714286%;
+}
 footer .copyright {
+    clear: both;
     display: block;
     margin: 1em 0;
+    padding: 1em 0 0;
     text-align: center;
     font-size: 0.75em;
 }
 .clear {
     clear:both;
 }
+
 /* Media Queries */
+
+@media screen and (max-width: 320px) {
+    nav ul,
+    section#strapline,
+    article,
+    footer {
+        min-width: 320px;
+    }
+    nav ul li {
+        width:50%;
+        margin-bottom: 0.625em;
+    }
+    section#strapline h2 {
+        font-size: 1.6em;
+    }
+    article h2 {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul,
+    section#strapline,
+    article,
+    footer {
+        max-width: 480px;
+    }
+    
+    section#strapline span {
+        display: inline;
+    }
+    
+    #github {
+        width: 31.25%;
+        padding-left: 2.08333333333%;
+        padding-right: 4.16666666667%;
+    }
+    #linkedin {
+        text-align: right;
+        width: 10.4166666667%;
+        padding-left: 0;
+        padding-right: 4.16666666667%;
+    }
+    #googleplus {
+        width: 10.4166666667%;
+        padding-left:0;
+        padding-right: 4.16666666667%;
+    }
+    #twitter {
+        width: 31.25%;
+        padding-left: 0;
+        padding-right: 2.08333333333%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul,
+    section#strapline,
+    article,
+    footer {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    nav ul,
+    section#strapline,
+    article,
+    footer {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    nav ul,
+    section#strapline,
+    article,
+    footer {
+        max-width: 960px;
+    }
+}
