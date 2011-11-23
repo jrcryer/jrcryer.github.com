@@ -125,12 +125,10 @@ article section p {
     margin-bottom: 0.8em;
 }
 article a,
+article a:hover,
 article a:visited {
     color: #3D3D3D;
     text-decoration: none;
-}
-article a:hover {
-    text-decoration: underline;
 }
 
 footer {
@@ -239,7 +237,7 @@ footer .copyright {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
     nav ul,
     section#strapline,
     article,
@@ -248,20 +246,51 @@ footer .copyright {
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 720px) {
     nav ul,
     section#strapline,
     article,
     footer {
         max-width: 720px;
     }
+    article section .project {
+        float: left;
+        width: 46.5277777778%;
+    }
+    article section div.first,
+    article section div.mid,
+    article section div.last {
+        padding-right: 6.94444444444%;
+        clear: left;
+    }
+    article section div.override {
+        padding-right: 0;
+        clear: none;
+    }
+    article section {
+        clear: left;
+    }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 960px) {
     nav ul,
     section#strapline,
     article,
     footer {
         max-width: 960px;
+    }
+    article section .project {
+        width: 31.25%;
+    }
+    article section div.first,
+    article section div.second {
+        padding-right: 3.125%;
+    }
+    article section div.last {
+        padding-right: 0;
+        clear: none;
+    }
+    article section div.mid {
+        clear: none;
     }
 }
