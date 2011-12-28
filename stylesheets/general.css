@@ -53,8 +53,16 @@ table {
 	margin-bottom: 0.625em;
 }
 th {
+	background: #E6E6E6;
+	width: 49px;
 	padding: 0.625em;
 	border-bottom: 1px dotted #000;
+}
+th:first-child {
+	width: 240px;
+}
+th:nth-child(2) {
+	width: 240px;
 }
 th span {
 	display: block;
