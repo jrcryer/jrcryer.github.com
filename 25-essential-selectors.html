@@ -1,0 +1,277 @@
+---
+layout: selectors
+---
+
+<header>
+    <h1>25 Essential CSS Selectors</h1>
+</header>
+<article>
+    <p>A compiled list of CSS selectors that are essential to all front-end web developers.</p>
+    <table>
+        <thead>
+            <th></th>
+            <th></th>
+            <th id="ie"><span>Internet Explorer</span></th>
+            <th id="ff"><span>Firefox</span></th>
+            <th id="chrome"><span>Chrome</span></th>
+            <th id="safari"><span>Safari</span></th>
+            <th id="opera"><span>Opera</span></th>
+        </thead>
+        <tbody>
+            <!-- 1. Universal Selector -->
+            <tr>
+                <td class="selector">*</td>
+                <td>*{...}</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 2. ID selector -->
+            <tr>
+                <td class="selector">#X</td>
+                <td>#header{...}</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 3. Class selector -->
+            <tr>
+                <td class="selector">.X</td>
+                <td>.tooltip{...}</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 4. Descandant selector -->
+            <tr>
+                <td class="selector">X Y</td>
+                <td>ul li{...}</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 5. Type selector -->
+            <tr>
+                <td class="selector">X</td>
+                <td>h1</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 6. Pseudo selector -->
+            <tr>
+                <td class="selector">X:visited, X:link, X:checked</td>
+                <td>input:checked{...}</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 7. Adjacent selector -->
+            <tr>
+                <td class="selector">X + Y</td>
+                <td>p+ul</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 8. Child selector -->
+            <tr>
+                <td class="selector">X > Y</td>
+                <td>ul > li</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 9. Adjacent selector -->
+            <tr>
+                <td class="selector">X ~ Y</td>
+                <td>p~ul</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 10. Attribute selector -->
+            <tr>
+                <td class="selector">X[title]</td>
+                <td>a[title]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 11. Attribute value selector -->
+            <tr>
+                <td class="selector">X[href="foo"]</td>
+                <td>a[href="http://www.google.co.uk"]
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 12. Attribute value selector -->
+            <tr>
+                <td class="selector">X[href*="bar"]</td>
+                <td>a[href*="mydomain.com"]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 13. Attribute value starts with selector -->
+            <tr>
+                <td class="selector">X[href^="http"]</td>
+                <td>a[href^="https"]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 14. Attribute value ends with selector -->
+            <tr>
+                <td class="selector">X[href$=".jpg"]</td>
+                <td>img[src$=".pdf"]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 15. Data attribute selector -->
+            <tr>
+                <td class="selector">X[data-*="foo"]</td>
+                <td>a[data-*="external"]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 16. Attribute value selector -->
+            <tr>
+                <td class="selector">X[foo~="bar"]</td>
+                <td>a[data-type~="image"]</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 17. Pseudo selector -->
+            <tr>
+                <td class="selector">X:after</td>
+                <td>p:after</td>
+                <td>IE8+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 18. Pseudo selector -->
+            <tr>
+                <td class="selector">X:hover</td>
+                <td>a:hover</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 19. Negation selector -->
+            <tr>
+                <td class="selector">X:not(selector)</td>
+                <td>tr:not(nth-child(2n))</td>
+                <td>IE9+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 20. Pseudo element selector -->
+            <tr>
+                <td class="selector">X::pseudoElement</td>
+                <td>p::first-line</td>
+                <td>IE6+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 21. Child selector -->
+            <tr>
+                <td class="selector">X:nth-child(n)</td>
+                <td>tr:nth-child(2n)</td>
+                <td>IE9+</td>
+                <td class="tick">FF3.5+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">No</td>
+            </tr>
+            <!-- 22. Last child selector -->
+            <tr>
+                <td class="selector">X:nth-last-child(n)</td>
+                <td>tr:nth-last-child(20)</td>
+                <td>IE9+</td>
+                <td class="tick">FF3.5+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 23. First child selector -->
+            <tr>
+                <td class="selector">X:first-child</td>
+                <td>ul:first-child</td>
+                <td>IE7+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 24. Last child selector -->
+            <tr>
+                <td class="selector">X:last-child</td>
+                <td>ul:last-child</td>
+                <td>IE9+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+            <!-- 25. Type of selector -->
+            <tr>
+                <td class="selector">X:nth-of-type(n)</td>
+                <td>ul:nth-of-type(2)</td>
+                <td>IE9+</td>
+                <td class="tick">FF3.5+</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+                <td class="tick">Yes</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <sup>*</sup>Data original sourced from <a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/">Nettuts The 30 CSS Selectors you Must Memorize</a>
+    </p>
+    <p>Produced by <a href="http://www.jamescryer.com">James Cryer</a></p>
+</article>

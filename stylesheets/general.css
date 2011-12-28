@@ -1,0 +1,93 @@
+body {
+    font-family: 'Lato', Arial;
+    padding: 0;
+    color: #EFEFEF;
+	background: #E6E6E6;
+}
+header {
+	background: #222 url(/images/dark-background.jpg) top left;
+	border-bottom: 1px solid #555;
+	-webkit-box-shadow: 0px 0px 5px #333;
+	-moz-box-shadow: 0px 0px 5px #333;
+	box-shadow: 0px 0px 5px #333;
+}
+h1 {
+	max-width: 920px;
+	font-family: 'Oswald', Arial;
+	padding: 1.25em 0;
+	font-size: 150%; /* 24 / 16 */ 
+	text-shadow: 0 2px 1px #000;
+	margin: 0 auto;
+	width: 93%;
+}
+article {
+    padding-bottom: 2em;
+    margin: 0 auto;
+    width: 93%;
+    margin: 0 auto;
+    max-width: 920px;
+}
+header, p {
+	margin-bottom: 1.25em;
+}
+p {
+	color: #426585;
+}
+p:nth-last-child(2) {
+	margin: 0.625em;
+	float: left;
+	font-size: 62.5%;
+	line-height: 0.625em;
+}
+p:last-child {
+	margin: 0.625em;
+	font-size:75%;
+	float:right;
+	line-height: 0.625em;
+}
+table {
+	width: 100%;
+	color: #222;
+	box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+	text-shadow: 0 1px 0 #FFF;
+	margin-bottom: 0.625em;
+}
+th {
+	padding: 0.625em;
+	border-bottom: 1px dotted #000;
+}
+th span {
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	background: url(/images/browser-icons.png);
+}
+#ie span {
+	background-position: -142px 0;
+}
+#ff span {
+	background-position: -38px 0;
+}
+#safari span { 
+	background-position: -108px 0;
+}
+#opera span {
+	background-position: -75px 0;
+}
+td {
+	padding: 0.625em;
+}
+td.tick {
+	width: 40px;
+}
+td.selector {
+	color:#5185B5;
+	text-align: right;
+}
+tr td:nth-child(2) {
+	color:#1E90DE;
+}
+tr:not(:nth-child(2n)) td {
+	background: #DDD;
+}
