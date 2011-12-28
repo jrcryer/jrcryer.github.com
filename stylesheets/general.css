@@ -36,7 +36,7 @@ p {
 p:nth-last-child(2) {
 	margin: 0.625em;
 	float: left;
-	font-size: 62.5%;
+	font-size: 75%;
 	line-height: 0.625em;
 }
 p:last-child {
