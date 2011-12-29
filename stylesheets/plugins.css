@@ -1,0 +1,114 @@
+body {
+    font-family: 'Lato', Arial;
+    padding: 0;
+    color: #EFEFEF;
+	background: #E6E6E6;
+}
+header {
+	background: #222 url(/images/dark-background.jpg) top left;
+	border-bottom: 1px solid #555;
+	-webkit-box-shadow: 0px 0px 5px #333;
+	-moz-box-shadow: 0px 0px 5px #333;
+	box-shadow: 0px 0px 5px #333;
+}
+footer {
+	color: #426585;
+	max-width: 720px;
+	width: 93%;
+	margin: 0 auto;
+}
+footer p {
+	float: right;
+	font-size: 75%;
+}
+h1 {
+	max-width: 720px;
+	font-family: 'Oswald', Arial;
+	padding: 1.25em 0;
+	font-size: 150%; /* 24 / 16 */ 
+	text-shadow: 0 2px 1px #000;
+	margin: 0 auto;
+	width: 93%;
+}
+h2, h3 {
+	font-family: 'Oswald', Arial;
+	font-size: 120%;
+	color: #426585;
+	margin-bottom:0.75em;
+	text-shadow: 0 1px 1px #FFF;
+}
+h3 {
+	font-size: 110%;
+}
+article {
+	color: #426585;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    width: 93%;
+    margin: 0 auto;
+    max-width: 720px;
+}
+header, p {
+	margin-bottom: 1.25em;
+}
+.ajax {
+	color: #426585;
+}
+.download {
+	padding: 0 0 0 27.777778%;
+}
+.download li a{
+	font-family: 'Oswald', Arial;
+	display: block;
+	float: left;
+	width: 25.6956%;
+	line-height: 30px;
+	margin: 0.75em;
+	padding: 0.325em;
+	text-align:center;
+	text-shadow: 0 -2px 0 #6c9c2c;
+	text-decoration: none;
+	border-radius: 4px;
+	border:1px solid #6c9c2c;
+	background: #6c9c2c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6c9c2c 0%, #98ba41 0%, #6c9c2c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6c9c2c), color-stop(0%,#98ba41), color-stop(100%,#6c9c2c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6c9c2c 0%,#98ba41 0%,#6c9c2c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6c9c2c 0%,#98ba41 0%,#6c9c2c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6c9c2c 0%,#98ba41 0%,#6c9c2c 100%); /* IE10+ */
+	background: linear-gradient(top,  #6c9c2c 0%,#98ba41 0%,#6c9c2c 100%); /* W3C */
+	-webkit-box-shadow: inset 0 1px #cbfc85;
+	-moz-box-shadow: inset 0 1px #cbfc85;
+	box-shadow: inset 0 1px #cbfc85;
+	color: #FFF;
+}
+.download li a:hover {
+	box-shadow: 0 0;
+	background: #6c9c2c;
+}
+.documentation, .example {
+	clear:both;
+}
+.example {
+	margin: 0 0 0.75em;
+}
+.documentation dl {
+	border-radius: 6px;
+	background: #E0E0E0 url(/images/noise.png);
+	box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.2);
+	padding: 1.25em;
+}
+.documentation dt {
+	color: #1E90DE;
+	margin: 0 0 0.625em;
+}
+.documentation dd {
+	margin: 0 0 1.25em;
+}
+.example pre.prettyprint {
+	display: block;
+	padding: 1.25em 1.25em 0.625em;
+	border-radius: 6px;
+	background: #F5F5F5;
+	border: 1px solid #DCDCDC;
+}

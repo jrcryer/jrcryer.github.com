@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("table").attachHeaders();
+    prettyPrint();
 });
 
 (function ($) {

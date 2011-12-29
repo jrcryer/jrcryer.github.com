@@ -1,0 +1,51 @@
+---
+layout: selectors
+stylesheet: plugins
+title: AJAX File Uploader
+description:
+keywords: 
+---
+
+<header>
+    <h1>AJAX File Uploader</h1>
+</header>
+<article class="ajax">
+    <h2>jQuery AJAX File Uploader</h2>
+    <p>Simple jQuery plugin to make AJAX file uploading easy!</p>
+    <section class="example">
+        <h3>Example</h3>
+        <pre class="prettyprint">
+            (function($) {
+                $('form').ajaxFileUploader({
+                    input: '.files',
+                    hideButton: true,
+                    onSuccess: function(text) {
+                        $('.info').text(text);       
+                    }
+                });
+            })(jQuery);
+        </pre>
+    </section>
+    <ul class="download">
+        <li><a href="https://github.com/jrcryer/jquery.ajax-file-uploader/zipball/master">Download</a></li>
+        <li><a href="https://github.com/jrcryer/jquery.ajax-file-uploader">Source</a></li>
+    </ul>
+    <section class="documentation">
+        <h3>Options</h3>
+        <dl>
+            <dt>input</dt>
+            <dd><em>Defaults to #files.</em> Selector of file input form field</dd>
+            <dt>onSuccess</dt>
+            <dd>Callback when files are successfully uploaded.</dd>
+            <dt>onFailure</dt>
+            <dd>Callback when files fail to upload.</dd>
+            <dt>hideButton</dt>
+            <dd><em>Defaults to false.</em> Hide submit button and automatically upload files as user selects them.</dd>
+            <dt>buttons</dt>
+            <dd>The buttons that will be hidden when hideButtons is set to true</dd>
+        </dl>
+    </section>
+</article>
+<footer>
+    <p>Produced by <a href="http://www.jamescryer.com">James Cryer</a></p>
+</footer>

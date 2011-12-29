@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>25 Essential CSS Selectors</title>
-        <meta name="description" content="25 Essential CSS Selectors and Support Browsers" />
-        <meta name="keywords" content="CSS, Selectors, Browser Support" />
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}" />
+        <meta name="keywords" content="{{ page.keywords }}" />
         <link rel="stylesheet" href="/stylesheets/reset.css" />
-        <link rel="stylesheet" href="/stylesheets/general.css" />
+        <link rel="stylesheet" href="/stylesheets/{{page.stylesheet}}.css" />
+        <link rel="stylesheet" href="/stylesheets/prettify.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <script src="/javascript/selectors.js"></script>
+        <script src="/javascript/prettify.js"></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-15966817-3']);
