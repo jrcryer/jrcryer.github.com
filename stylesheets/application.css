@@ -115,7 +115,7 @@ article section h3 {
     font-size: 1.2em;
     line-height: 1.325em;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 1px #FFF;
+    text-shadow: 0 1px 0 #FFF;
     margin-bottom: 1em;
 }
 article section div {
