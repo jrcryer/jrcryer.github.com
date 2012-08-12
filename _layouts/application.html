@@ -9,7 +9,7 @@
         <meta name="description" content="Home for open source projects / experiments from James Cryer" />
         <meta name="keywords" content="Open Source, James Cryer, PHP, iOS, JavaScript, jQuery, WordPress, Cardiff, Wales, UK" />
         <link href="/stylesheets/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
-        
+
         <!--[if IE]>
             <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <![endif]-->
@@ -32,14 +32,12 @@
         <link href='http://fonts.googleapis.com/css?family=Mako|Lobster|Comfortaa' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        {% include header.html %}
+        <div class="row" id="page">
+            {% include header.html %}
 
-        {% include navigation.html %}
-        
-        {% include strapline.html %}
+            {{ content }}
 
-        {{ content }}
-
-        {% include footer.html %}
+            {% include footer.html %}
+        </div>
     </body>
 </html>
