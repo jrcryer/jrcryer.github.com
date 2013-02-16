@@ -4199,23 +4199,71 @@ body {
 }
 
 /* line 8, ../sass/app.scss */
+h1 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+  font-size: 36px;
+  line-height: 40px;
+  font-family: 'Carrois Gothic', sans-serif;
+}
+
+/* line 18, ../sass/app.scss */
+h2 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  font-weight: normal;
+  font-family: 'Scada', sans-serif;
+  position: relative;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  line-height: 40px;
+}
+
+/* line 28, ../sass/app.scss */
+h3 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  font-weight: normal;
+  font-family: 'Scada', sans-serif;
+  position: relative;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  line-height: 40px;
+}
+
+/* line 38, ../sass/app.scss */
+h4 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  font-weight: normal;
+  font-family: 'Scada', sans-serif;
+  position: relative;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* line 48, ../sass/app.scss */
 .navigation li {
   text-align: center;
 }
-/* line 9, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 .navigation li a {
   display: block;
 }
 
-/* line 14, ../sass/app.scss */
+/* line 54, ../sass/app.scss */
 #page {
-  background: #fefff8;
+  background: white;
   padding: 40px;
   border-top: 3px solid #a52724;
   border-radius: 0 0 3px 3px;
 }
 
-/* line 20, ../sass/app.scss */
+/* line 60, ../sass/app.scss */
 #linkedin, #google {
   text-align: center;
 }
