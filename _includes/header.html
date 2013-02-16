@@ -1,9 +1,10 @@
-<header id="title">
-    <hgroup>
-        <h1 id="page-title">
-            <a href="/">
-                <span class="first">James</span> <span class="second">Cryer</span>
-            </a>
-        </h1>
-    </hgroup>
-</header>
+<div class="masthead">
+    <div class="container">
+        <!-- <h3 class="muted">James Cryer</h3> -->
+        <ul class="nav nav-pills pull-right">
+            <li{%if page.current == 'home' %} class="active"{% endif %}><a href="/">Home</a></li>
+            <li{%if page.current == 'about' %} class="active"{% endif %}><a href="#">About</a></li>
+            <li{%if page.current == 'projects' %} class="active"{% endif %}><a href="/projects">Projects</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.masthead {
+    width: 100%;
+    background: @grey;
+
+    .container {
+        height: 92px;
+        padding-top: 40px;
+        position: relative;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0px;
+        right: 2.5%;
+
+        a {
+            padding: 24px 12px;
+            margin-top: 0;
+            -o-border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            border-top: 5px solid @grey;
+            -webkit-transition: all linear .2s;
+            -moz-transition: all linear .2s;
+            -o-transition: all linear .2s;
+            transition: all linear .2s;
+        }
+        a:hover {
+            border-top: 5px solid darken(@grey, 20%);
+            background: transparent;
+        }
+        .active > a,
+        .active > a:hover,
+        .active > a:focus {
+            color: #333;
+            border-top: 5px solid @red;
+            background: transparent;
+        }
+    }
+
+}
