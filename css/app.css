@@ -6044,7 +6044,7 @@ a:hover {
   background-color: transparent;
 }
 #badges {
-  width: 75%;
+  width: 62%;
   margin: 24px auto;
   font-size: 32px;
 }
@@ -6085,10 +6085,15 @@ a:hover {
 }
 .masthead .nav {
   position: absolute;
+  width: 100%;
   top: 0px;
-  right: 2.5%;
+  right: 0px;
+}
+.masthead .nav li {
+  width: 33%;
 }
 .masthead .nav a {
+  text-align: center;
   padding: 24px 12px;
   margin-top: 0;
   -o-border-radius: 0;
@@ -6119,6 +6124,7 @@ a:hover {
 #intro .container {
   margin: 0 auto;
   background: url(../img/code.png) no-repeat;
+  background-position: 100% 50%;
   padding: 10px 0;
 }
 #intro h1 {
@@ -6275,7 +6281,19 @@ a:hover {
   color: #e64136;
   margin-bottom: 6px;
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 480px) {
+  .masthead .nav {
+    right: 2.5%;
+    width: 40%;
+  }
+  .masthead .nav li {
+    width: 33%;
+  }
+  #badges {
+    width: 34%;
+  }
+}
+@media only screen and (min-width: 768px) {
   .content h4 {
     text-align: center;
   }
@@ -6289,8 +6307,12 @@ a:hover {
   }
   #intro .container {
     padding: 80px 0;
+    background-position: top 50%;
   }
   #intro .container.slim {
     padding: 20px 0;
+  }
+  #badges {
+    width: 75%;
   }
 }

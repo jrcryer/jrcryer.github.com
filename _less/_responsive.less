@@ -1,5 +1,22 @@
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 480px) {
+
+    .masthead {
+        .nav {
+            right: 2.5%;
+            width: 40%;
+
+            li {
+                width: 33%;
+            }
+        }
+    }
+
+    #badges {
+        width: 34%;
+    }
+}
+@media only screen and (min-width: 768px) {
     .content {
         h4 {
             text-align: center;
@@ -16,8 +33,13 @@
 
     #intro .container {
         padding: 80px 0;
+        background-position: top 50%;
     }
     #intro .container.slim {
         padding: 20px 0;
+    }
+
+    #badges {
+        width: 75%;
     }
 }
