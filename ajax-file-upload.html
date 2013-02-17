@@ -1,34 +1,34 @@
 ---
-layout: selectors
-stylesheet: plugins
-title: AJAX File Uploader
-description:
-keywords: 
+layout: application
 ---
 
-<header>
-    <h1>AJAX File Uploader</h1>
-</header>
-<article class="ajax">
-    <h2>jQuery AJAX File Uploader</h2>
-    <p>Simple jQuery plugin to make AJAX file uploading easy!</p>
+<div class="intro">
+    <div class="container-narrow">
+        <h1>AJAX File Uploader</h1>
+        <p class="lead"><strong>jQuery AJAX File Uploader</strong></p>
+        <p class="lead">Simple jQuery plugin to make AJAX file uploading easy!</p>
+    </div>
+</div>
+
+<div class="container">
     <section class="example">
         <h3>Example</h3>
-        <pre class="prettyprint">
+        <pre class="prettyprint linenums language-js">
             (function($) {
                 $('form').ajaxFileUploader({
                     input: '.files',
                     hideButton: true,
                     onSuccess: function(text) {
-                        $('.info').text(text);       
+                        $('.info').text(text);
                     }
                 });
             })(jQuery);
         </pre>
     </section>
-    <ul class="download">
-        <li><a href="https://github.com/jrcryer/jquery.ajax-file-uploader/zipball/master">Download</a></li>
-        <li><a href="https://github.com/jrcryer/jquery.ajax-file-uploader">Source</a></li>
+
+    <ul class="row-fluid download">
+        <li class="span2 offset4"><a class="btn btn-primary" href="https://github.com/jrcryer/jquery.ajax-file-uploader/zipball/master">Download</a></li>
+        <li class="span2"><a class="btn btn-primary" href="https://github.com/jrcryer/jquery.ajax-file-uploader">Source</a></li>
     </ul>
     <section class="documentation">
         <h3>Options</h3>
@@ -45,7 +45,4 @@ keywords:
             <dd>The buttons that will be hidden when hideButtons is set to true</dd>
         </dl>
     </section>
-</article>
-<footer>
-    <p>Produced by <a href="http://www.jamescryer.com">James Cryer</a></p>
-</footer>
+</div>
