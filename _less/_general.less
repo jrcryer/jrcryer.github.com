@@ -20,7 +20,8 @@
 }
 a,
 a:focus,
-a:visited {
+a:visited,
+a:hover {
     color: @red;
 }
 .btn-primary:visited {
@@ -32,12 +33,32 @@ a:visited {
     color: #000;
     background-color: transparent;
 }
-.notch {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 48.1%;
-    width: 40px;
-    height: 20px;
-    background: url('../img/notch.png') left top no-repeat;
+#badges {
+    width: 75%;
+    margin: 24px auto;
+    font-size: 32px;
+
+    li {
+        float: left;
+    }
+    a {
+        display: block;
+        line-height: 42px;
+        width: 32px;
+        overflow: hidden;
+        height: 40px;
+        margin: 0 6px;
+        color: #3D3D3D;
+        -webkit-transition: all linear .2s;
+        -moz-transition: all linear .2s;
+        -o-transition: all linear .2s;
+        transition: all linear .2s;
+    }
+    a:hover {
+        text-decoration: none;
+        color: @red;
+    }
+}
+.clear {
+    clear: both;
 }
