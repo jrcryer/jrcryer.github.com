@@ -1,0 +1,30 @@
+---
+layout: application
+current: playground
+title: Playground - James Cryer
+description: Open source projects demonstrated learning
+keyword: Open Source, James Cryer, PHP, iOS, JavaScript, jQuery, WordPress, Cardiff, Wales, UK
+---
+
+<div id="intro">
+    <div class="container slim">
+        <div class="container-narrow">
+            <span class="font-cogs m-icon"></span>
+            <h1>Playground</h1>
+            <p class="lead">A series of experimental projects</p>
+        </div>
+    </div>
+</div>
+<div class="projects">
+    <div class="container">
+        {% include playground/php.html %}
+        <hr />
+        {% include playground/ruby.html %}
+        <hr />
+        {% include playground/ios.html %}
+        <hr />
+        {% include playground/wordpress.html %}
+        <hr />
+        {% include icons.html %}
+    </div>
+</div>
