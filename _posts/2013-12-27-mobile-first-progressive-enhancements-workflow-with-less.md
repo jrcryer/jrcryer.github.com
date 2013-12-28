@@ -40,7 +40,7 @@ We've kept the main less file very simple:
 
 ```
 
-To start we include LESS files for storing variables and mixins to ensure these are available for all modules that proceed.  Following that we include all the individual modules, this sets the baseline CSS that is offered to mobile users.  Lastly we include `_responsive.less` which includes all the breakpoints.
+To start we include LESS files for storing variables and mixins to ensure these are available for modules that proceed.  Following that we include the individual modules, this sets the baseline CSS that is offered to mobile users.  Lastly we include `_responsive.less` which includes all the breakpoints.
 
 The `_responsive.less` then looks something similar to:
 
@@ -77,11 +77,11 @@ The `_responsive.less` then looks something similar to:
 
 ```
 
-This approach allows us to cascade the styles as the interface becomes more complex for devices with larger displays.  The particular breakpoints are based around the a grid that is defined by the UX team.  The experience also delivered to users on smaller devices is vastly different to those on larger displays.  Users with larger displays are offered a map and list, in a split view whilst the devices with smaller displays simply have the list of content.  This is demonstrated below in these low fidelity wireframes.
+This approach allows us to cascade the styles as the interface becomes more complex for devices with larger displays.  The particular breakpoints are based around the a grid that is defined by the UX team.  The experience delivered to users on smaller devices is vastly different to those on larger displays.  Users with larger displays are offered a map and list, in a split view whilst the devices with smaller displays simply have the list of content.  This is demonstrated below in these low fidelity wireframes.
 
-The [mobile first](http://www.lukew.com/resources/mobile_first.asp) approach has approved critical in delivering this enhanced experience.  The CSS defined included in `app.less` defines a baseline and as the device width increases, we can constrain and the enhance the interface.  To improve maintainability, we've also defined the breakpoints as variables to allow us to easily adjust them if needed in the future.
+The [mobile first](http://www.lukew.com/resources/mobile_first.asp) approach has approved critical in delivering this enhanced experience.  The CSS defined included in `app.less` defines a baseline and as the device width increases, we can constrain and the enhance the elements on the page.  To improve maintainability, we've also defined the breakpoints as variables to allow us to easily adjust them if needed in the future.
 
-We've also taken this approach to reduce the number of media queries.  We could have easily had a single less file per module and littered each module with it's own set of media queries.  However, the above approach leads to a single media query for each breakpoint for the whole application.
+We've taken this approach to reduce the number of media queries.  We could have easily had a single less file per module and littered each module with it's own set of media queries.  However, the above approach leads to a single media query for each breakpoint for the whole application and reduce the overall size of the output.
 
 ## Modular approach
 
@@ -123,7 +123,7 @@ These top level selectors match the name of the module folder as well.
 
 ## Progressively enhancing
 
-As explained earlier, we also needed to ensure the product degraded gracefully and the content is accessible on IE6 and up.  In our particular product, a map appears only on the larger displays.  Therefore, we needed a way of delivering the content to those users without creating a flicker when the page first loads.  This was achieved using the well [documented](http://www.paulirish.com/2009/avoiding-the-fouc-v3/) approach of appending a class to the `documentElement` using JavaScript.
+As explained earlier, we needed to ensure the product degraded gracefully and the content is accessible on IE6 and up.  In our particular product, a map appears only on the larger displays.  Therefore, we needed a way of delivering the content to those users without creating a flicker when the page first loads.  This was achieved using the well [documented](http://www.paulirish.com/2009/avoiding-the-fouc-v3/) approach of appending a class to the `documentElement` using JavaScript in the head of the HTML document.
 
 Once we had a class added to the `documentElement`, we can then manipulate the content for a particular experience.  However, we didn't want to break how the modules were setup up to achieve this.  Using LESS's ampersand feature to prepend the current selector to the parent this was easy to achieve.  For example:
 
