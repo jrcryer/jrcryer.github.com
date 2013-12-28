@@ -1,6 +1,6 @@
 .masthead {
     width: 100%;
-    background: @grey;
+    background: $grey;
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.15);
     -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.15);
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
@@ -29,21 +29,21 @@
             -moz-border-radius: 0;
             -webkit-border-radius: 0;
             border-radius: 0;
-            border-top: 5px solid @grey;
+            border-top: 5px solid $grey;
             -webkit-transition: all linear .2s;
             -moz-transition: all linear .2s;
             -o-transition: all linear .2s;
             transition: all linear .2s;
         }
         a:hover {
-            border-top: 5px solid darken(@grey, 20%);
+            border-top: 5px solid darken($grey, 20%);
             background: transparent;
         }
         .active > a,
         .active > a:hover,
         .active > a:focus {
             color: #333;
-            border-top: 5px solid @red;
+            border-top: 5px solid $red;
             background: transparent;
         }
     }

@@ -10,7 +10,7 @@
 }
 .footer {
     background: #202020;
-    color: @white;
+    color: $white;
     margin: 24px 0 0;
     padding: 24px;
 
@@ -22,10 +22,10 @@ a,
 a:focus,
 a:visited,
 a:hover {
-    color: @red;
+    color: $red;
 }
 .btn-primary:visited {
-    color: @white;
+    color: $white;
 }
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
@@ -56,7 +56,7 @@ a:hover {
     }
     a:hover {
         text-decoration: none;
-        color: @red;
+        color: $red;
     }
 }
 .clear {

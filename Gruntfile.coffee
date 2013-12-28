@@ -42,9 +42,14 @@ module.exports = (grunt) ->
       files:
           src: ['<%= paths.css %>/app.css']
 
+    sass:
+      dist:
+        files:
+          '<%= paths.css %>/app.css' : '<%= paths.sass %>/app.scss'
+
     watch:
       css:
-        files: ['<%= paths.sass %>/*.sass']
+        files: ['<%= paths.sass %>/**/*.scss']
         tasks: ['sass']
         options:
           livereload: true
