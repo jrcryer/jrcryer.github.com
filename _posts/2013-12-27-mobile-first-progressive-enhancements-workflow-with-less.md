@@ -3,7 +3,7 @@ layout: posts
 current: posts
 title: Mobile First and Progressive Enhancements with LESS
 description: An introduction on how to tackle a responsive solution that uses the mobile first approach, deliverying a highly accessible solution.
-excerpt: An introduction on how to tackle a responsive solution that uses the mobile first approach, deliverying a highly accessible solution.
+excerpt: An introduction on tackling a responsive site with use of a mobile first approach whilst delivering a highly accessible solution.
 keyword: Mobile First, Accessible, Progressive Enhancements, Workflow, LESS
 ---
 
