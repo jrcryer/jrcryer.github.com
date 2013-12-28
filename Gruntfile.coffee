@@ -6,10 +6,10 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     paths:
-      images: "app/img"
-      js: "app/js"
-      css: "app/styles"
-      sass: "app/_sass"
+      images: "img"
+      js: "js"
+      css: "css"
+      sass: "_sass"
 
     imagemin:
       dist:
