@@ -43,6 +43,8 @@ module.exports = (grunt) ->
           src: ['<%= paths.css %>/app.css']
 
     sass:
+      options:
+        style: "compressed"
       dist:
         files:
           '<%= paths.css %>/app.css' : '<%= paths.sass %>/app.scss'
