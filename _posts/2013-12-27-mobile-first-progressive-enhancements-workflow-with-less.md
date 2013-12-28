@@ -7,7 +7,7 @@ excerpt: An introduction on how to tackle a responsive solution that uses the mo
 keyword: Mobile First, Accessible, Progressive Enhancements, Workflow, LESS
 ---
 
-# Mobile First and Progressive Enhancements Workflow with LESS
+# Mobile First and Progressive Enhancements with LESS
 
 This is the first in a series of posts on how over the past 12 months I've aimed to optimise of the developer workflow on a project I've worked on.
 
