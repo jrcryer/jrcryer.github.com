@@ -6,7 +6,13 @@
     <body>
         {% include header.html %}
 
-        {{ content }}
+        <div class="container">
+            <div class="row-fluid blog-item">
+                <div class="span12">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
 
         {% include footer.html %}
         {% include foot.html %}

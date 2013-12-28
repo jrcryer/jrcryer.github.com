@@ -1,2 +1,5 @@
+exclude: [".ruby-env", ".ruby-gemset", "README", "Gemfile", "Gemfile.lock"]
+pygments: true
 safe: true
 permalink: pretty
+excerpt_separator: ""
