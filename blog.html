@@ -7,26 +7,29 @@ current: posts
     <div class="container slim">
         <div class="container-narrow">
             <span class="font-file-xml m-icon"></span>
-            <h1>Posts</h1>
+            <h1>Writing</h1>
             <p class="lead">Articles on web and mobile development</p>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row-fluid blog">
-        <div class="span12">
+        <div class="span8 offset2">
             {% for post in site.posts %}
                 <article class="post">
                     <header>
-                        <h1><a href="{{ post.url }}" class="post-date">{{ post.title }}</a></h1>
+                        <h2><a href="{{ post.url }}" class="post-date">{{ post.title }}</a></h2>
                     </header>
                     <div class="intro">
-                        {{ post.excrept }}
+                        <p>{{ post.excerpt }}</p>
                     </div>
                     <footer>
-                        <a href="{{ post.url }}" class="post-date">December 27, 2013</a>
+                        <p><a href="{{ post.url }}" class="post-date">{{ post.date | date: "%-d %B %Y" }}</a></p>
                     </footer>
+                    <hr />
+                </article>
             {% endfor %}
         </div>
     </div>
+    {% include icons.html %}
 </div>
