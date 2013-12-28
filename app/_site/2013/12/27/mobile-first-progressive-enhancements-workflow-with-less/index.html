@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0" />
+<meta name="viewport" content="width=device-width">
+
+<title>Mobile First and Progressive Enhancements with LESS - James Cryer</title>
+<meta name="description" content="An introduction on how to tackle a responsive solution that uses the mobile first approach, deliverying a highly accessible solution." />
+<meta name="keywords" content="Mobile First, Accessible, Progressive Enhancements, Workflow, LESS" />
+<link rel="stylesheet" href="/css/app.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<!--[if IE]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    </head>
+    <body>
+        <div class="masthead">
+    <div class="container">
+        <!-- <h3 class="muted">James Cryer</h3> -->
+        <ul class="nav nav-pills pull-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li class="active"><a href="/blog">Blog</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/playground">Playground</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <div class="container">
+            <div class="row-fluid blog-item">
+                <div class="span8 offset2">
+                    <h1 id="mobile_first_and_progressive_enhancements_with_less">Mobile First and Progressive Enhancements with LESS</h1>
+
+<p>This is the first in a series of posts on improving developer workflow from my experiences over the past 12 months whilst working with the <a href="http://www.bbc.co.uk">BBC</a>.</p>
+
+<p>The first in series is a brief explanation on how we’ve tackled implementing a responsive solution that must be accessible and also support IE6+. Early in the process, we settled on the use of LESS as our <a href="http://coding.smashingmagazine.com/2010/12/06/using-the-less-css-preprocessor-for-smarter-style-sheets/">CSS preprocessor</a>. For those not familiar with <a href="http://lesscss.org/">LESS</a>, it is a CSS preprocessor which extends CSS by adding features such as variables mixins.</p>
+
+<h2 id="getting_started">Getting Started</h2>
+
+<p>We’ve kept the main less file very simple:</p>
+
+<pre class="css21"><code class="css21">
+   /**
+    * Vanilla
+    */
+   @import &quot;_variables.less&quot;;
+   @import &quot;_mixins.less&quot;;
+
+   /**
+    * Modules
+    */
+   @import &quot;modules/general/_base.less&quot;;
+   @import &quot;modules/forms/_base.less&quot;;
+   @import &quot;modules/header/_base.less&quot;;
+   ...
+   @import &quot;modules/footer/_base.less&quot;;
+
+   /**
+    * Responsive modules
+    */
+   @import &quot;_responsive.less&quot;;
+
+</code></pre>
+
+<p>To start we include LESS files for storing variables and mixins to ensure these are available for the modules that proceed. Following that we include the individual modules, this sets the baseline CSS that is offered to mobile users. Lastly we include <code>_responsive.less</code> which includes all the breakpoints.</p>
+
+<p>The <code>_responsive.less</code> then looks something similar to:</p>
+
+<pre><code>
+   @media screen and (min-width: @mobile_portrait) {
+       @import &quot;modules/header/_responsive-320px-min.less&quot;;
+       ...
+   }
+
+   @media screen and (min-width: @mobile_landscape) {
+       @import &quot;modules/header/_responsive-400px-min.less&quot;;
+       ...
+   }
+
+   @media screen and (min-width: @small_tablet) {
+       @import &quot;modules/header/_responsive-600px-min.less&quot;;
+       ...
+   }
+
+   @media screen and (min-width: @tablet_portrait) {
+       @import &quot;modules/header/_responsive-768px-min.less&quot;;
+       ...
+   }
+
+   @media screen and (min-width : @desktop) {
+       @import &quot;modules/header/_responsive-1008px-min.less&quot;;
+       ...
+   }
+
+   @media screen and (min-width : @tablet_landscape) {
+       @import &quot;modules/home/_responsive-1024px-min.less&quot;;
+       ...
+   }
+
+</code></pre>
+
+<p>This approach allows us to cascade the styles as the interface becomes more complex for devices with larger displays. The particular breakpoints are based around the a grid that is defined by the UX team. The experience delivered to users on smaller devices is vastly different to those on larger displays. Users with larger displays are offered a map and list, in a split view whilst the devices with smaller displays simply have the list of content. This is demonstrated below in these low fidelity wireframes.</p>
+
+<p><img src="/img/wireframe-1.png" alt="Low fidelity wireframe, demonstrating responsive name" /></p>
+
+<p>The <a href="http://www.lukew.com/resources/mobile_first.asp">mobile first</a> approach has approven critical in delivering this enhanced experience. The CSS defined included in <code>app.less</code> defines a baseline and as the device width increases, we can constrain and the enhance the elements on the page. To improve maintainability, we’ve also defined the breakpoints as variables to allow us to easily adjust them if needed in the future.</p>
+
+<p>We’ve taken this approach to reduce the number of media queries. We could have easily had a single less file per module and littered each module with it’s own set of media queries. However, the above approach leads to a single media query for each breakpoint for the whole application and reduce the overall size of the output.</p>
+
+<h2 id="modular_approach">Modular approach</h2>
+
+<p>As seen above, we’ve taken a highly modular approach to the problem. This allows us to easily introduce minor changes to individual modules and easily navigate between each module. The folder structure is as follows:</p>
+
+<pre><code>
+   app.less
+   _responsive.less
+   modules/
+       /header
+           _base.less
+           _responsive-320px-min.less
+       /footer
+           _base.less
+           _responsive-320px-min.less
+           _responsive-600px-min.less
+
+</code></pre>
+
+<p>As the product is relatively small, each module mainly appears on the page once. Therefore most modules start with an ID, for example the header module files will start with:</p>
+
+<pre><code>
+   #header {
+       ...
+   }
+
+</code></pre>
+
+<p>The same selector is applied at the top of each less file for a given module, hence applying the same selector across all breakpoints. For the less specific modules, a similar top level selector is applied. For example:</p>
+
+<pre><code>
+   .article {
+      ...
+   }
+
+</code></pre>
+
+<p>These top level selectors match the name of the module folder as well.</p>
+
+<h2 id="progressively_enhancing">Progressively enhancing</h2>
+
+<p>As explained earlier, we needed to ensure the product degraded gracefully and the content is accessible on IE6 and up. In our particular product, a map appears only on the larger displays. Therefore, we needed a way of delivering the content to those users without creating a flicker when the page first loads. This was achieved using the well <a href="http://www.paulirish.com/2009/avoiding-the-fouc-v3/">documented</a> approach of appending a class to the <code>documentElement</code> using JavaScript in the head of the HTML document.</p>
+
+<p>Once we had a class added to the <code>documentElement</code>, we can then manipulate the content for a particular experience. However, we didn’t want to break how the modules were setup up to achieve this. Using LESS’s ampersand feature to prepend the current selector to the parent this was easy to achieve. For example:</p>
+
+<pre><code>
+   #header {
+     ...
+     .js &amp; {
+
+     }
+   }
+
+</code></pre>
+
+<p>This outputs the following:</p>
+
+<pre><code>
+   .js #header {
+     ...
+   }
+
+</code></pre>
+
+<p>The product also needs the ability to disable the map feature at any point. Again this was easily achievable with the same approach as above.</p>
+
+<pre><code>
+   #header {
+     .no-map &amp; {
+       ...
+     }
+   }
+
+</code></pre>
+
+<h2 id="supporting_older_browsers">Supporting older browsers</h2>
+
+<p>As there is a need to support older browsers, which do not offer support for media queries, we decided to offer the desktop experience for these browsers. This was relatively easier, we could simply compile the a browser specific stylesheet which contained all the styles across the breakpoints For example, we have a less file <code>ie7.less</code>:</p>
+
+<pre><code>
+   @import &quot;_variables&quot;;
+   @import &quot;_mixins&quot;;
+   @import &quot;_debug&quot;;
+   ...
+   @import &quot;modules/header/_responsive-400px-min&quot;;
+   @import &quot;modules/footer/_responsive-400px-min&quot;;
+   ...
+   @import &quot;modules/header/_responsive-600px-min&quot;;
+   @import &quot;modules/footer/_responsive-600px-min&quot;;
+   ...
+   @import &quot;modules/ie/_ie7.less&quot;;
+
+</code></pre>
+
+<p>This is then included in the head of the document using <a href="http://www.quirksmode.org/css/condcom.html">conditional comments</a>.</p>
+
+<p>Hopefully this quick overview will prove useful to you in your projects as you try to tackle delivering a progressively enhancement, mobile first solution.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+    <div class="container">
+        <p>&copy; James Cryer 2013</p>
+    </div>
+</div>
+        <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15966817-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+    </body>
+</html>
