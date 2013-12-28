@@ -79,6 +79,8 @@ The `_responsive.less` then looks something similar to:
 
 This approach allows us to cascade the styles as the interface becomes more complex for devices with larger displays.  The particular breakpoints are based around the a grid that is defined by the UX team.  The experience delivered to users on smaller devices is vastly different to those on larger displays.  Users with larger displays are offered a map and list, in a split view whilst the devices with smaller displays simply have the list of content.  This is demonstrated below in these low fidelity wireframes.
 
+![Low fidelity wireframe, demonstrating responsive name](/img/wireframe-1.png)
+
 The [mobile first](http://www.lukew.com/resources/mobile_first.asp) approach has approven critical in delivering this enhanced experience.  The CSS defined included in `app.less` defines a baseline and as the device width increases, we can constrain and the enhance the elements on the page.  To improve maintainability, we've also defined the breakpoints as variables to allow us to easily adjust them if needed in the future.
 
 We've taken this approach to reduce the number of media queries.  We could have easily had a single less file per module and littered each module with it's own set of media queries.  However, the above approach leads to a single media query for each breakpoint for the whole application and reduce the overall size of the output.
