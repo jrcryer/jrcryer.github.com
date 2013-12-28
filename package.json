@@ -1,0 +1,15 @@
+{
+  "name": "jamescryer.com",
+  "version": "0.1.0",
+  "description": "Package containing build deps",
+  "devDependencies": {
+    "matchdep": "~0.3.0",
+    "time-grunt": "~0.2.5",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-jekyll": "~0.4.1",
+    "grunt-contrib-jshint": "~0.8.0"
+  },
+  "private": true
+}
