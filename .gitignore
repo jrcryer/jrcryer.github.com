@@ -1,3 +1,5 @@
 nbproject/*
 _site/*
 jrcryer.sublime*
+.sass-cache/*
+node_modules/
