@@ -1,13 +1,13 @@
 ---
 layout: posts
 current: posts
-title: An Accessible, Mobile First and Progressive Enhancements Workflow with LESS
+title: Mobile First and Progressive Enhancements with LESS
 description: An introduction on how to tackle a responsive solution that uses the mobile first approach, deliverying a highly accessible solution.
 excerpt: An introduction on how to tackle a responsive solution that uses the mobile first approach, deliverying a highly accessible solution.
 keyword: Mobile First, Accessible, Progressive Enhancements, Workflow, LESS
 ---
 
-# An Accessible, Mobile First and Progressive Enhancements Workflow with LESS
+# Mobile First and Progressive Enhancements Workflow with LESS
 
 This is the first in a series of posts on how over the past 12 months I've aimed to optimise of the developer workflow on a project I've worked on.
 
