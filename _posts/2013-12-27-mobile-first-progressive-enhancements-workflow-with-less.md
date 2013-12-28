@@ -9,7 +9,7 @@ keyword: Mobile First, Accessible, Progressive Enhancements, Workflow, LESS
 
 # Mobile First and Progressive Enhancements with LESS
 
-This is the first in a series of posts on improving developer workflow from my experiences over the past 12 months.
+This is the first in a series of posts on improving developer workflow from my experiences over the past 12 months whilst working with the [BBC](http://www.bbc.co.uk).
 
 The first in series is a brief explanation on how we've tackled implementing a responsive solution that must be accessible and also support IE6+.  Early in the process, we settled on the use of LESS as our [CSS preprocessor](http://coding.smashingmagazine.com/2010/12/06/using-the-less-css-preprocessor-for-smarter-style-sheets/).  For those not familiar with [LESS](http://lesscss.org/), it is a CSS preprocessor which extends CSS by adding features such as variables mixins.
 
