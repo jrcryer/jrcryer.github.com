@@ -7,8 +7,6 @@ excerpt: Boilerplate Gruntfile for working with Github pages.  Includes SASS, Li
 keyword: Developer Workflow, SASS, LiveReload, Gruntfile
 ---
 
-# Boilerplate Gruntfile for Github pages
-
 ![Grunt and Github pages build](/img/grunt-github-pages.png)
 
 Whilst updating this site, I thought it was time to _eat my own dog food_ by optimising my  workflow for the site.

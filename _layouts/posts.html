@@ -1,3 +1,5 @@
+{% assign post = page %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,9 +10,7 @@
 
         <div class="container">
             <div class="row-fluid blog-item">
-                <div class="span8 offset2">
-                    {{ content }}
-                </div>
+                {% include post_details.html %}
             </div>
         </div>
 
