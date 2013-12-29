@@ -63,7 +63,7 @@ module.exports = (grunt) ->
 
     watch:
       jekyll:
-        files: ['**/*.html']
+        files: ['**/*.html', '_posts/*.md']
         tasks: ['jekyll']
         options:
           livereload: true
