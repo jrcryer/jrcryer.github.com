@@ -1,4 +1,4 @@
-exclude: [".ruby-env", ".ruby-gemset", "README", "Gemfile", "Gemfile.lock"]
+exclude: [".sass-cache", ".ruby-env", ".ruby-gemset", "README", "Gemfile", "Gemfile.lock", "node_modules"]
 pygments: true
 safe: true
 permalink: pretty

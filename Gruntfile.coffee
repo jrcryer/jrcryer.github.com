@@ -11,6 +11,13 @@ module.exports = (grunt) ->
       css: "css"
       sass: "_sass"
 
+    connect:
+      server:
+        options:
+          port: 4000
+          base: '_site'
+          keepalive: true
+
     imagemin:
       dist:
         options:
@@ -19,6 +26,11 @@ module.exports = (grunt) ->
           expand: true
           src: ['<%= paths.images %>/**/*']
         ]
+
+    jekyll:
+      dist:
+        options:
+          bundleExec: true
 
     jshint:
       options:
@@ -50,15 +62,20 @@ module.exports = (grunt) ->
           '<%= paths.css %>/app.css' : '<%= paths.sass %>/app.scss'
 
     watch:
+      jekyll:
+        files: ['**/*.html']
+        tasks: ['jekyll']
+        options:
+          livereload: true
       css:
         files: ['<%= paths.sass %>/**/*.scss']
-        tasks: ['sass']
+        tasks: ['sass', 'jekyll']
         options:
           livereload: true
       js:
         files: ['<%= paths.js %>/*.js']
-        tasks: ['js']
+        tasks: ['js', 'jekyll']
         options:
           livereload: true
 
-  grunt.registerTask 'default', ['build']
+  grunt.registerTask 'default', ['connect']
