@@ -3,7 +3,7 @@ layout: posts
 current: posts
 title: Debugging Core Data and Networking with PonyDebugger
 description: PonyDebugger offers the ability to debug iOS applications Core Data and Networking
-excerpt: PonyDebugger offers the ability to debug iOS applications Core Data and Networking.  Find out how to get started with it in this post.
+excerpt: PonyDebugger offers the ability to debug iOS applications Core Data and Networking.  Find out how to get start using it on your projects.
 keyword: iOS, Core Data, PonyDebugger, Networking, Debugging, Tooling
 ---
 
