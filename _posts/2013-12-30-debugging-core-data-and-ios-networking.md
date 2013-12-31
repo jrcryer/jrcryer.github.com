@@ -13,7 +13,7 @@ I've just started a new iOS project which requires the use of CoreData and makes
 
 # Installing
 
-Installing PonyDebugger is very simple to install and takes less than 5 minutes.  Firstly you need to install the service that runs locally.  To install this service use the follow:
+Installing PonyDebugger is very simple and takes less than 5 minutes.  Firstly you need to install the service that runs locally.  To install this service use the follow:
 
 ```
 curl -sk https://cloud.github.com/downloads/square/PonyDebugger/bootstrap-ponyd.py |\
@@ -28,7 +28,7 @@ Once successfully installed, you can run the service using:
 
 ```
 
-If the service starts successfully, you should be able to access from Chrome by visiting `http://localhost:9000`.
+If the service starts successfully, you should be able to access using Chrome by visiting `http://localhost:9000`.
 
 Next the PonyDebugger client needs to be installed in your iOS application.  I'ved used [CocoaPods](http://beta.cocoapods.org/?q=ponydebugger) and added the following to my Podfile:
 
@@ -37,7 +37,7 @@ pod "PonyDebugger", "~> 0.3.0"
 
 ```
 
-And running `pod install`.  Next you need to add use the newly added library to your app.  This will connect to the PonyDebugger service when the application starts.  This code should only be used during development and not in production for obivous reasons.
+And running `pod install`.  You'll need to add use the newly added library to your app by modifying your application delegate.  The client should only be used during development and not in production for obivous reasons.
 
 In your application delegate add the following to the start of `- (BOOL) application:didFinishLaunchingWithOptions`:
 
@@ -48,8 +48,10 @@ In your application delegate add the following to the start of `- (BOOL) applica
 
 ```
 
+The above code connects to the service (by running `ponyd serve`) and then enables debugging of network traffic from your application.
+
 # Viewing the data
 
-If you run your application in the iOS simulator and revisit the `http://localhost:9000` in Chrome, this should list all applications that are current talking to your service.  Selecting your application will display the Chrome DevTools interface for your application.  Click the Network tab to view the network connections made by your application.
+Run your application in the iOS simulator and revisit the `http://localhost:9000` in Chrome, this should list all applications that are current talking to the ponyd service.  Selecting your application will display the Chrome DevTools interface for your application.  Click the Network tab to view the network connections made by your application.
 
-For further information regarding setting up debugging for CoreData, Remote Logging and View Hiearchy read the excellent documentation produced by Square on their [Github page](https://github.com/square/PonyDebugger).
+For further information regarding setting up debugging of CoreData, Remote Logging and View Hiearchy read the excellent documentation produced by Square on their [Github page](https://github.com/square/PonyDebugger).
