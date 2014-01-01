@@ -11,7 +11,7 @@ I'm forever searching for ways to make my life easier as a developer, I love try
 
 I've just started a new iOS project which requires the use of CoreData and makes calls to a remote content store to periodically refresh the data within the application.  This seemed like the perfect opportunity to give it a spin.
 
-# Installing
+## Installing
 
 Installing PonyDebugger is very simple and takes less than 5 minutes.  Firstly you need to install the service that runs locally.  To install this service use the follow:
 
@@ -50,7 +50,7 @@ In your application delegate add the following to the start of `- (BOOL) applica
 
 The above code connects to the service (by running `ponyd serve`) and then enables debugging of network traffic from your application.
 
-# Viewing the data
+## Viewing the data
 
 Run your application in the iOS simulator and revisit the `http://localhost:9000` in Chrome, this should list all applications that are current talking to the ponyd service.  Selecting your application will display the Chrome DevTools interface for your application.  Click the Network tab to view the network connections made by your application.
 
