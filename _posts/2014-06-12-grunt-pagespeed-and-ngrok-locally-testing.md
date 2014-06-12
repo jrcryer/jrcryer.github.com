@@ -41,7 +41,7 @@ npm install load-grunt-tasks --save-dev
 Now that the project has all it's dependencies, lets focus on the Grunt configuration to automate the testing of our local developement environment.
 For this example, we'll assume we have our application around running on http://localhost:8000.  Lets start with a very simple skelton Gruntfile.
 
-```
+```js
 'use strict'
 
 var ngrok = require('ngrok');
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
 In the above Gruntfile we load the ngrok node module and setup our Gruntfile to export our tasks.  Finally the load-grunt-tasks module executed to automatically load all our Grunt plugins.  Next we'll configure grunt-pagespeed:
 
-```
+```js
 'use strict'
 
 var ngrok = require('ngrok');
