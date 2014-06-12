@@ -150,7 +150,7 @@ Next we call `ngrok.connect`, passing our port in and a callback.  The callback 
 
 We check whether we have any errors conneeting to ngrok but updating our pagespeed task configuration by using `grunt.config.set` and passing the url in.  Finally we call the `pagespeed` task with `grunt.task.run`.
 
-## Conclusion
+## That's a wrap
 
 Hopefully this will be a helpful starting point in your adventures to automate performance testing with Grunt and PageSpeed Insights against local environments.  I'd encourage you to explore the ngrok and Grunt configuration to handle more sophisticated scenarios.
 
