@@ -21,6 +21,7 @@ To get started firstly include ngrok into your project.
 
 ```
 npm install ngrok --save-dev
+
 ```
 
 Next we need to setup Grunt and our Gruntfile, lets install Grunt firstly:
@@ -29,6 +30,7 @@ Next we need to setup Grunt and our Gruntfile, lets install Grunt firstly:
 npm install -g grunt-cli
 npm install --save-dev grunt
 touch Gruntfile.js
+
 ```
 
 We need to now add the Grunt plugins to the project:
@@ -36,6 +38,7 @@ We need to now add the Grunt plugins to the project:
 ```
 npm install grunt-pagespeed --save-dev
 npm install load-grunt-tasks --save-dev
+
 ```
 
 Now that the project has all it's dependencies, lets focus on the Grunt configuration to automate the testing of our local developement environment.
@@ -52,6 +55,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
 };
+
 ```
 
 In the above Gruntfile we load the ngrok node module and setup our Gruntfile to export our tasks.  Finally the load-grunt-tasks module executed to automatically load all our Grunt plugins.  Next we'll configure grunt-pagespeed:
@@ -87,6 +91,7 @@ module.exports = function(grunt) {
     }
   });
 };
+
 ```
 
 The above defines configuration for the pagespeed task and defines two Grunt targets, one that will run our local dev environment via the the Desktop strategy and another via the mobile strategy.
@@ -143,6 +148,7 @@ module.exports = function(grunt) {
   // Register default tasks
   grunt.registerTask('default', ['psi-ngrok']);
 };
+
 ```
 
 In the above configuration, we introduce a new custom task known as `psi-ngrok`.  The next couple of lines declare the local port that will be mapped to ngrok.  As our application is running on port 8000 (e.g. http://localhost:8000), we set this to 8000.
