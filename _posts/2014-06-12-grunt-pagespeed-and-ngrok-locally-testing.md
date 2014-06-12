@@ -14,7 +14,7 @@ As outlined in Paul's tweet the tool to solve this problem is [ngrok](https://ng
 to the internet and also allows you to monitor traffic the development environment recieves.  For the remainder this post, we'll explore
 how ngrok and grunt-pagespeed can be integrated into your build process.
 
-# Setting up ngrok
+### Setting up ngrok
 
 Ngrok is available as binary download from it's own site https://ngrok.com.  However, it is also available as a Node module.
 To get started firstly include ngrok into your project.
@@ -150,7 +150,7 @@ Next we call `ngrok.connect`, passing our port in and a callback.  The callback 
 
 We check whether we have any errors conneeting to ngrok but updating our pagespeed task configuration by using `grunt.config.set` and passing the url in.  Finally we call the `pagespeed` task with `grunt.task.run`.
 
-## That's a wrap
+### That's a wrap...
 
 Hopefully this will be a helpful starting point in your adventures to automate performance testing with Grunt and PageSpeed Insights against local environments.  I'd encourage you to explore the ngrok and Grunt configuration to handle more sophisticated scenarios.
 
