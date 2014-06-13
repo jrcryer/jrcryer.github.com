@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 
 ```
 
-In the above configuration, we introduce a new custom task known as `psi-ngrok`.  The next couple of lines declare the local port that will be mapped to ngrok.  As our application is running on port `8000` (e.g. http://localhost:8000), we set this to 8000. Next we call `ngrok.connect`, passing our port in and a callback.  The callback defines two parameters, `err` and `url`. The important parameter is `url` which provides us with the public URL that maps to our local development environment.
+In the above configuration, we introduce a new custom task known as `psi-ngrok`.  The next couple of lines declare the local port that will be mapped to ngrok.  As our application is running on port `8000` (e.g. http://localhost:8000), we set this to `8000`. Next we call `ngrok.connect`, passing our port in and a callback.  The callback defines two parameters, `err` and `url`. The important parameter is `url` which provides us with the public URL that maps to our local development environment.
 
 We check whether we have any errors connecting to ngrok but updating our pagespeed task configuration by using `grunt.config.set` and passing the url in. Finally we call the `pagespeed` task with `grunt.task.run`.
 
