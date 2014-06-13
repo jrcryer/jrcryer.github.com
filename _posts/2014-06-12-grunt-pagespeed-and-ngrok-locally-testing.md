@@ -1,7 +1,7 @@
 ---
 layout: posts
 current: posts
-title: Grunt PageSpeed with Ngrok for local testing
+title: Grunt PageSpeed with ngrok for local testing
 description: A tutorial on how to use Grunt PageSpeed with Ngrok to run Insights against local environments
 excerpt: A tutorial on how to use Grunt PageSpeed with Ngrok to run Insights against local environments
 keyword: Performance, Grunt, PageSpeed, PSI
