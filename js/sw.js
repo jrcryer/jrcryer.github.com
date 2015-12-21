@@ -1,3 +1,7 @@
 if ('serviceWorker' in navigator) {
-  console.log('ServiceWorkers supported');
+  navigator.serviceWorker.register('/workers/basic.js', { scope: '/workers/' }).then(function(reg) {
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    console.log('Registration failed with ' + error);
+  });
 }
